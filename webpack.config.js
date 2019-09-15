@@ -32,6 +32,7 @@ function materialImporter(url, prev) {
 }
 
 module.exports = {
+	mode: 'development',
 	entry: ['./src/app.scss', './src/app.ts'],
 	output: {
 		filename: JSBUNDLE,
@@ -55,7 +56,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.ts$/,
-				use: 'ts-loader',
+				loader: 'ts-loader',
 				exclude: /node_modules/
 			},
 			{
@@ -81,10 +82,10 @@ module.exports = {
 							sassOptions: {
 								importer: materialImporter
 							}
-						},
+						}
 					}
-				],
+				]
 			}
-		],
-	},
+		]
+	}
 }
