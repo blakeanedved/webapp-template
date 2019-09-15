@@ -44,7 +44,6 @@ module.exports = {
 	devServer: {
 		publicPath: '/',
 		contentBase: './public',
-		hot: true
 	},
 	plugins: [
 		new HTMLWebpackPlugin({
